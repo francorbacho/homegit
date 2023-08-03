@@ -152,7 +152,7 @@ zle -N zleiab
 
 # Shows a list of available abbreviations as help.
 function help-show-abk () {
-  zle -M "$(print "Available abbreviations for expansion:"; print -a -C 2 ${(kv)abk})"
+    zle -M "$(print "Available abbreviations for expansion:"; print -a -C 2 ${(kv)abk})"
 }
 zle -N help-show-abk
 
