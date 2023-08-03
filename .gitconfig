@@ -1,0 +1,37 @@
+[init]
+    defaultBranch = master
+
+[push]
+    default = simple
+
+[user]
+    email = fran.corbachoflores@gmail.com
+    name = francorbacho
+
+[color "branch"]
+    current = yellow reverse
+
+[color "diff"]
+    whitespace = red reverse
+
+[alias]
+    plog = log --pretty=oneline --abbrev-commit
+    recover-commit = !git commit -e -m \"$(cat .git/COMMIT_EDITMSG)\"
+
+    # https://stackoverflow.com/a/3338774
+    ahead = log --branches --not --remotes --simplify-by-decoration --graph --oneline
+
+    # https://stackoverflow.com/a/35075021
+    adog = log --all --decorate --oneline --graph
+    ff = merge --ff-only @{upstream}
+    pwd = !pwd
+    web = !xdg-open $(git remote get-url origin)
+    pushf = push --force-with-lease --force-if-includes
+    wdiff = diff --word-diff
+
+[grep]
+    lineNumber = true
+
+[commit]
+    gpgsign = true
+    verbose = true
