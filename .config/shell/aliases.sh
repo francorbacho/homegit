@@ -2,7 +2,7 @@
 alias hg='git --git-dir="$HOME/.homegit" --work-tree="$HOME"'
 
 alias open=xdg-open
-alias ls='ls --color=auto --literal --group-directories-first --sort=extension'
+alias ls='ls --color=auto --group-directories-first'
 alias rm=" rm"
 alias ip='ip --color=auto'
 alias grep='grep --color=auto'
