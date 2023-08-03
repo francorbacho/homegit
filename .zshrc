@@ -9,7 +9,7 @@
 # DESCRIPTION:
 #   Zsh shell configuration file.
 
-source ~/.zalias
+source ~/.config/shell/aliases.sh
 
 # Change the title of the terminal to match the current running command.
 if [[ $TERM == xterm* ]]; then
