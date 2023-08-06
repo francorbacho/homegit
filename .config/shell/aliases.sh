@@ -1,5 +1,6 @@
 # 🤭
 alias hg='git --git-dir="$HOME/.homegit" --work-tree="$HOME"'
+alias rs='source ~/.zshrc'
 
 alias open=xdg-open
 alias ls='ls --color=auto --group-directories-first'
