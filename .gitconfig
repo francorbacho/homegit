@@ -33,7 +33,7 @@
     lineNumber = true
 
 [commit]
-    gpgsign = true
+    gpgsign = false
     verbose = true
 
 [sendemail]
