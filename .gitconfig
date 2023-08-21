@@ -5,7 +5,7 @@
     default = simple
 
 [user]
-    email = fran.corbachoflores@gmail.com
+    email = francorbacho@proton.me
     name = francorbacho
 
 [color "branch"]
@@ -35,3 +35,9 @@
 [commit]
     gpgsign = true
     verbose = true
+
+[sendemail]
+    smtpserver = localhost
+    smtpuser = francorbacho@proton.me
+    smtpencryption = none
+    smtpserverport = 1025
