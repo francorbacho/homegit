@@ -15,6 +15,7 @@
     whitespace = red reverse
 
 [alias]
+    lc = log --pretty=fuller --relative-date --show-signature
     plog = log --pretty=oneline --abbrev-commit
     recover-commit = !git commit -e -m \"$(cat .git/COMMIT_EDITMSG)\"
 
