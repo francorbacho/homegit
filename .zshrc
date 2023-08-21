@@ -128,6 +128,14 @@ backward-kill-dir() {
 zle -N backward-kill-dir
 bindkey '^[^?' backward-kill-dir # Alt-Backspace
 
+function repeat-history () {
+    zle up-history
+    zle accept-line
+}
+
+zle -N repeat-history
+bindkey '^J' repeat-history
+
 # Everything from here is modified code from grml-zsh-config.
 declare -A abk
 abk=(
