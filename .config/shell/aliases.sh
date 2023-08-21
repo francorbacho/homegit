@@ -10,6 +10,10 @@ alias grep='grep --color=auto'
 alias poem="grep -P '^[[:alnum:]]+$' /usr/share/dict/american-english | shuf -n2 | tr '[:upper:]' '[:lower:]' | xargs printf '%s.%s\n'"
 alias bc="bc -q"
 
+alias gdb="gdb -q "
+alias python="python -q"
+alias sudo="sudo "
+
 function cdt() {
     dir="/tmp/tmp-$(poem)"
     while [[ -d $dir ]]; do
