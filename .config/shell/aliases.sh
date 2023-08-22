@@ -28,3 +28,25 @@ alias diff='diff --unified --color --report-identical-files'
 
 alias mpv="mpv --keep-open=yes"
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
+
+function mfs () {
+    host=$1
+
+    if ! grep -q $host ~/hosts; then
+        echo "$0: No such host '$host'"
+        return 1
+    fi
+
+    if mountpoint -q "/remote/$host"; then
+        echo "$0: Host is already mounted"
+        return 0
+    fi
+
+    remoteuser=$(ssh $host whoami)
+    localuser=$(whoami)
+
+    [ -d /remote/$host ] || sudo sh -c \
+        "mkdir -p /remote/$host && chown -R $localuser:$localuser /remote/$host"
+
+    sshfs $host:/home/$remoteuser /remote/$host
+}
