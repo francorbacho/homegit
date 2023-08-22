@@ -7,7 +7,7 @@ alias ls='ls --color=auto --group-directories-first'
 alias rm=" rm"
 alias ip='ip --color=auto'
 alias grep='grep --color=auto'
-alias poem="grep -P '^[[:alnum:]]+$' /usr/share/dict/american-english | shuf -n2 | tr '[:upper:]' '[:lower:]' | xargs printf '%s.%s\n'"
+alias poem="grep -E '^[[:alnum:]]+$' /usr/share/dict/american-english | shuf -n2 | tr '[:upper:]' '[:lower:]' | xargs printf '%s.%s\n'"
 alias bc="bc -q"
 
 alias gdb="gdb -q "
