@@ -2,6 +2,11 @@
 
 user_pref("geo.enabled", false);
 
+// Theming
+user_pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org");
+user_pref("browser.theme.content-theme", 0);
+user_pref("browser.theme.toolbar-theme", 0);
+
 // Disable "Recommend extensions as you browse"
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
 
