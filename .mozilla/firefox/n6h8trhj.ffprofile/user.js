@@ -2,6 +2,9 @@
 
 user_pref("geo.enabled", false);
 
+// Disable "Recommend extensions as you browse"
+user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
+
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 
