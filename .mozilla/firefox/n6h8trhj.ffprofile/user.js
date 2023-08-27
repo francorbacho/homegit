@@ -5,6 +5,8 @@ user_pref("geo.enabled", false);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 
+user_pref("browser.download.useDownloadDir", false);
+user_pref("browser.download.always_ask_before_handling_new_types", true);
 user_pref("browser.urlbar.placeholderName", "DuckDuckGo");
 user_pref("browser.urlbar.placeholderName.private", "DuckDuckGo");
 user_pref("browser.search.suggest.enabled.private", true);
