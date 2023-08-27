@@ -1,13 +1,4 @@
 #!/bin/zsh
-#
-# LICENSE:
-#   See license file in the root of the repository.
-#
-# DEPENDENCIES:
-#   zsh
-#
-# DESCRIPTION:
-#   Zsh shell configuration file.
 
 source ~/.config/shell/aliases.sh
 
