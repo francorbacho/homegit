@@ -16,7 +16,7 @@
 
 [alias]
     lc = log --pretty=fuller --relative-date --show-signature
-    plog = log --pretty=oneline --abbrev-commit
+    plog = log --pretty=oneline --abbrev-commit --check
     pwd = !pwd
     web = !xdg-open $(git remote get-url origin)
     wdiff = diff --word-diff
