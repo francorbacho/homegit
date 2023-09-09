@@ -79,7 +79,7 @@ highlight! link SignColumn LineNr
 highlight! link GitGutterChange GitGutterChanged
 
 highlight TrailingWhitespace ctermbg=red guibg=red
-match TrailingWhitespace /\s\+$/  
+match TrailingWhitespace /\s\+$/
 
 autocmd ModeChanged,BufReadPost,BufWritePost * :GitGutter
 
