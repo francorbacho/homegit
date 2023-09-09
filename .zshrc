@@ -174,4 +174,4 @@ bindkey '^x,' help-show-abk
 bindkey '^Xe' insert-datestamp
 
 # https://github.com/wofr06/lesspipe
-eval "$(lesspipe.sh)"
+command -v lesspipe.sh > /dev/null && eval "$(lesspipe.sh)"
