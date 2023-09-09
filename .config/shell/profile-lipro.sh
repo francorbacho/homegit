@@ -10,5 +10,4 @@ export LIBVA_DRIVER_NAME=radeonsi
 export VDPAU_DRIVER=radeonsi
 
 export BROWSER=/var/lib/flatpak/exports/bin/re.sonny.Junction
-export EDITOR="`which vim`"
 export TERMINAL="`which foot`"
