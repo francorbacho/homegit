@@ -24,7 +24,7 @@ export LESS_TERMCAP_us=$(printf "\e[1;32m")
 
 # From https://wiki.archlinux.org/title/Color_output_in_console#man
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
-eval $(dircolors ~/LS_COLORS)
+command -v dircolors > /dev/null && eval $(dircolors ~/LS_COLORS)
 
 # From https://unix.stackexchange.com/a/273863
 HISTFILE="$HOME/.zsh_history"
