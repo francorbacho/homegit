@@ -50,14 +50,7 @@ setopt MARK_DIRS              # Adds a trailing / to directories resulting from 
 setopt NO_CLOBBER             # Disables shell redirection to files that already exist. Use >! to force.
 setopt GLOB_COMPLETE          # Globs (e.g. *.txt) that have multiple matches use menus.
 
-PROMPT=""
-PROMPT+="%B%F{black}"
-PROMPT+="%(?.%K{green}.%K{red})"
-PROMPT+="$(hostname)"
-PROMPT+=":%(5~|%-1~/.../%1~|%4~)"
-PROMPT+=" %f%k"
-PROMPT+="%F{blue}%K{black}"
-PROMPT+=" $ %b%f%k "
+eval "$(starship init zsh)"
 
 # Don't pollute $HOME.
 # https://stackoverflow.com/a/71271754
