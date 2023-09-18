@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 data=$(curl -s 'https://colornames.org/random/json/')
 hexcode=$(echo $data | jq -r '.hexCode')
 colorname=$(echo $data | jq -r '.name')
