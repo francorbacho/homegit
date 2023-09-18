@@ -1,0 +1,94 @@
+BLK                   38;5;68
+CAPABILITY            38;5;17
+CHR                   1;38;5;113
+DIR                   1;34
+DOOR                  38;5;127
+EXEC                  1;38;5;135
+FIFO                  38;5;120
+FILE                  0
+LINK                  target
+MULTIHARDLINK         38;5;222;1
+ORPHAN                04;48;5;198
+OTHER_WRITABLE        38;5;40;1
+SETGID                48;5;3;38;5;0
+SETUID                38;5;220;1;3;100;1
+SOCK                  38;5;197
+STICKY                38;5;86;48;5;234
+STICKY_OTHER_WRITABLE 48;5;235;38;5;139;3
+
+# Markdown files
+*README           01;04;33
+*LICENSE          38;5;220;1
+*COPYING          38;5;220;1
+*INSTALL          38;5;220;1
+*COPYRIGHT        38;5;220;1
+*AUTHORS          38;5;220;1
+*HISTORY          38;5;220;1
+*CONTRIBUTORS     38;5;220;1
+*PATENTS          38;5;220;1
+*VERSION          38;5;220;1
+*NOTICE           38;5;220;1
+*CHANGES          38;5;220;1
+.md               01;04;33
+.markdown         01;04;33
+.txt              01;33
+
+# Configuration files
+*config 38;5;178
+*cfg    38;5;178
+*conf   38;5;178
+*rc     38;5;178
+.ini    38;5;178
+.json   38;5;178
+.xml    38;5;178
+.toml   38;5;178
+.yaml   38;5;178
+.yml    38;5;178
+
+# Images
+.bmp    38;5;114
+.tiff   38;5;114
+.tif    38;5;114
+.gif    38;5;114
+.ico    38;5;114
+.jpeg   38;5;114
+.jpg    38;5;114
+.png    38;5;114
+.webp   38;5;114
+.svg    38;5;114
+.avi    38;5;114
+
+# Video
+.mkv    38;5;118
+.mov    38;5;118
+.mp4    38;5;118
+.mpeg   38;5;118
+.mpg    38;5;118
+.ogm    38;5;118
+.wmv    38;5;118
+.webm   38;5;118
+.flv    38;5;118
+.ogv    38;5;118
+
+# Subtitles
+.srt    38;5;123
+.ssa    38;5;123
+.sub    38;5;123
+
+# Audio
+.mp3    38;5;137
+.mp4a   38;5;137
+.ogg    38;5;137
+.wav    38;5;137
+
+# Code
+.c   38;5;111
+.cpp 38;5;111
+.h   38;5;111
+.rs  38;5;215
+.sh  38;5;219
+.py  38;5;222
+.vim 38;5;332
+
+.swp 38;5;81
+.swo 38;5;81
