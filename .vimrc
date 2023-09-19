@@ -8,6 +8,8 @@ set smarttab
 set expandtab
 set tabstop=4
 
+set mouse=a
+
 set autoindent
 set smartindent
 
