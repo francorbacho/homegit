@@ -19,6 +19,7 @@ set title
 
 " TODO: Add %#Highlight#
 set statusline=[%{getcwd()}]\ %f%=\ %n%m%r%h\ %l:%c\ %P
+set background=dark
 
 " Searching
 set incsearch
