@@ -55,7 +55,7 @@ highlight SpellBad ctermfg=white
 
 autocmd FileType mail setlocal spell textwidth=72
 
-autocmd FileType make setlocal noexpandtab
+autocmd FileType make,gitconfig setlocal noexpandtab
 
 " Modified from ":h using-xxd". This allows us to manually do ":set binary" and
 " enjoy the same nice things.

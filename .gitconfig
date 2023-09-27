@@ -1,46 +1,46 @@
 [init]
-    defaultBranch = master
+	defaultBranch = master
 
 [push]
-    default = simple
+	default = simple
 
 [user]
-    email = francorbacho@proton.me
-    name = francorbacho
+	email = francorbacho@proton.me
+	name = francorbacho
 
 [color "branch"]
-    current = yellow reverse
+	current = yellow reverse
 
 [color "diff"]
-    whitespace = red reverse
+	whitespace = red reverse
 
 [alias]
-    lc = log --pretty=fuller --relative-date --show-signature
-    plog = log --pretty=oneline --abbrev-commit --check
-    pwd = !pwd
-    web = !xdg-open $(git remote get-url origin)
-    wdiff = diff --word-diff
-    pushf = push --force-with-lease --force-if-includes
-    rc = rebase --continue
+	lc = log --pretty=fuller --relative-date --show-signature
+	plog = log --pretty=oneline --abbrev-commit --check
+	pwd = !pwd
+	web = !xdg-open $(git remote get-url origin)
+	wdiff = diff --word-diff
+	pushf = push --force-with-lease --force-if-includes
+	rc = rebase --continue
 
-    # https://stackoverflow.com/a/3338774
-    ahead = log --branches --not --remotes --simplify-by-decoration --graph --oneline
-    # https://stackoverflow.com/a/35075021
-    adog = log --all --decorate --oneline --graph
+	# https://stackoverflow.com/a/3338774
+	ahead = log --branches --not --remotes --simplify-by-decoration --graph --oneline
+	# https://stackoverflow.com/a/35075021
+	adog = log --all --decorate --oneline --graph
 
-    ff = merge --ff-only @{upstream}
-    fix = commit -p --amend --no-edit
-    recover-commit = !git commit -e -m \"$(cat .git/COMMIT_EDITMSG)\"
+	ff = merge --ff-only @{upstream}
+	fix = commit -p --amend --no-edit
+	recover-commit = !git commit -e -m \"$(cat .git/COMMIT_EDITMSG)\"
 
 [grep]
-    lineNumber = true
+	lineNumber = true
 
 [commit]
-    gpgsign = false
-    verbose = true
+	gpgsign = false
+	verbose = true
 
 [sendemail]
-    smtpserver = localhost
-    smtpuser = francorbacho@proton.me
-    smtpencryption = none
-    smtpserverport = 1025
+	smtpserver = localhost
+	smtpuser = francorbacho@proton.me
+	smtpencryption = none
+	smtpserverport = 1025
