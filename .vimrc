@@ -37,9 +37,6 @@ set clipboard=unnamedplus
 
 syntax on
 
-nmap <S-End> :tabnext<CR>
-nmap <S-Home> :tabprevious<CR>
-
 set splitright
 set splitbelow
 set colorcolumn=85
