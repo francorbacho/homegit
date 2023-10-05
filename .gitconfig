@@ -24,6 +24,7 @@
 	pushf = push --force-with-lease --force-if-includes
 	rc = rebase --continue
 	c = checkout
+	r = reset
 
 	# https://stackoverflow.com/a/3338774
 	ahead = log --branches --not --remotes --simplify-by-decoration --graph --oneline
