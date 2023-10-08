@@ -88,4 +88,4 @@ highlight! link GitGutterChange GitGutterChanged
 highlight TrailingWhitespace ctermbg=red guibg=red
 match TrailingWhitespace /\s\+$/
 
-autocmd VimEnter * if exists(":GitGutter") | exe "autocmd ModeChanged,BufReadPost,BufWritePost * :GitGutter" | endif
+autocmd CursorHold,VimEnter * if exists(":GitGutter") | exe "autocmd ModeChanged,BufReadPost,BufWritePost * :GitGutter" | endif
