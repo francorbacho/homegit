@@ -70,6 +70,8 @@ augroup Binary
     au BufWritePost * set nomod | endif
 augroup END
 
+highlight markdownCode term=none cterm=none ctermfg=white ctermbg=black
+
 highlight Search    term=none cterm=none      ctermfg=black ctermbg=blue
 highlight IncSearch term=none cterm=underline ctermfg=black ctermbg=green
 
