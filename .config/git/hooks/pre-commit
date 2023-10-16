@@ -1,0 +1,9 @@
+#!/bin/bash -eu
+
+files=$(git diff --staged --name-only)
+
+if [[ $(cat $files | grep -c ' $') -ne 0 ]]; then
+    echo "Trailing whitespace found on files: "
+    grep -nH --color=always ' $' $files
+    exit 1
+fi
