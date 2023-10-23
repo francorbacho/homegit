@@ -16,7 +16,6 @@ set smartindent
 " Netrw configuration
 let g:netrw_winsize = 30
 let g:netrw_liststyle = 3
-let g:netrw_keepdir = 0
 
 " Always show the status line
 set laststatus=2
