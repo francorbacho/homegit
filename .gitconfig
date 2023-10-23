@@ -8,6 +8,9 @@
 	default = simple
 	autoSetupRemote = true
 
+[fetch]
+	prune = true
+
 [user]
 	email = francorbacho@proton.me
 	name = francorbacho
