@@ -46,6 +46,8 @@ set splitright
 set splitbelow
 set colorcolumn=85
 
+let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 0.5, 'relative': v:true, 'yoffset': 1.0, 'border': 'none' } }
+
 autocmd FileType gitcommit setlocal nomodeline
 autocmd FileType gitcommit,markdown,gitsendemail setlocal spell textwidth=85
 autocmd FileType gitcommit,markdown,gitsendemail,help setlocal nowrap
