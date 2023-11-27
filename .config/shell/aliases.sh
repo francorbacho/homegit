@@ -13,6 +13,7 @@ alias bc="bc -q"
 alias gdb="gdb -q "
 alias python="python -q"
 alias sudo="sudo "
+alias clear="env TERM=xterm clear"
 
 function cdt() {
     dir="/tmp/tmp-$(poem)"
