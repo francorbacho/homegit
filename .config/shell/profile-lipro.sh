@@ -11,3 +11,6 @@ export VDPAU_DRIVER=radeonsi
 
 export BROWSER=/var/lib/flatpak/exports/bin/re.sonny.Junction
 export TERMINAL="`which foot`"
+
+# https://github.com/christoomey/dotfiles/issues/13#issuecomment-740943680
+export SESSION_MANAGER=
