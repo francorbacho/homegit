@@ -13,6 +13,9 @@ set mouse=a
 set autoindent
 set smartindent
 
+" https://stackoverflow.com/a/2360324
+filetype indent on
+
 " Netrw configuration
 let g:netrw_winsize = 30
 let g:netrw_liststyle = 3
