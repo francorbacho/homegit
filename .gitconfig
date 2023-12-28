@@ -25,7 +25,7 @@
 	a = add
 	c = checkout
 	d = diff
-	l = log
+	l = log --first-parent
 	r = reset
 	s = status
 
