@@ -40,7 +40,10 @@
 	# https://stackoverflow.com/a/3338774
 	ahead = log --branches --not --remotes --simplify-by-decoration --graph --oneline
 	# https://stackoverflow.com/a/35075021
-	adog = log --all --decorate --oneline --graph
+	adog = log --decorate --oneline --graph
+
+	# lists all commits since it diverged from master
+	lpr = !git log --oneline $(basename $(git rev-parse --abbrev-ref origin/HEAD))..HEAD
 
 	ff = merge --ff-only @{upstream}
 	fix = commit -p --amend --no-edit
