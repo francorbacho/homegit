@@ -24,6 +24,7 @@
 [alias]
 	a = add
 	c = checkout
+	cp = cherry-pick
 	d = diff
 	l = log --first-parent
 	r = reset
