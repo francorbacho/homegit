@@ -38,7 +38,7 @@
 	pushf = push --force-with-lease --force-if-includes
 	rc = rebase --continue
 	# rebase merge base
-	rmb = !git rebase -i $(git merge-base HEAD $(git master))
+	rmb = !git rebase --rebase-merges -i $(git merge-base HEAD $(git master))
 	# default branch
 	master = !basename $(git rev-parse --abbrev-ref origin/HEAD)
 
