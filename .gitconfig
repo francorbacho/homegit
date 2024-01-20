@@ -38,7 +38,9 @@
 	pushf = push --force-with-lease --force-if-includes
 	rc = rebase --continue
 	# rebase merge base
-	rmb = !git rebase -i $(git merge-base HEAD master)
+	rmb = !git rebase -i $(git merge-base HEAD $(git master))
+	# default branch
+	master = !basename $(git rev-parse --abbrev-ref origin/HEAD)
 
 	# https://stackoverflow.com/a/3338774
 	ahead = log --branches --not --remotes --simplify-by-decoration --graph --oneline
