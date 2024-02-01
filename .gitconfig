@@ -50,7 +50,7 @@
 	adog = log --decorate --oneline --graph
 
 	# lists all commits since it diverged from master. graph if the origin branch diverged.
-	lpr = !git log --oneline --graph origin/$(git branch --show-current) $(git merge-base origin/$(git master) HEAD)..HEAD
+	lpr = !git log --oneline --graph $(git rev-parse --abbrev-ref @{u} 2>/dev/null) $(git merge-base origin/$(git master) HEAD)..HEAD
 
 	ff = merge --ff-only @{upstream}
 	fix = commit -p --amend --no-edit
