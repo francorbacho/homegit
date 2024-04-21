@@ -93,3 +93,5 @@ highlight TrailingWhitespace ctermbg=red guibg=red
 match TrailingWhitespace /\s\+$/
 
 autocmd VimEnter * if exists(":GitGutter") | exe "autocmd ModeChanged,BufReadPost,BufWritePost * :GitGutter" | endif
+
+nnoremap <C-P> :GitGutterPreviewHunk<CR>
