@@ -30,21 +30,24 @@
 	r = reset
 	s = status
 
-	lc = log --pretty=fuller --relative-date --show-signature
-	plog = log --pretty=oneline --abbrev-commit --check
-	pwd = !pwd
-	web = !xdg-open $(git remote get-url origin)
 	wdiff = diff --word-diff
 	pushf = push --force-with-lease --force-if-includes
 	rc = rebase --continue
+	ds = diff --staged
+	rs = restore --staged
+
+	lc = log --pretty=fuller --relative-date --show-signature
+	plog = log --pretty=oneline --abbrev-commit --check
+
+	pwd = !pwd
+	web = !xdg-open $(git remote get-url origin)
+
 	# rebase merge base
 	rmb = !git rebase --rebase-merges -i $(git merge-base HEAD $(git master))
 	# default branch
 	master = !basename $(git rev-parse --abbrev-ref origin/HEAD)
 	# diff master
 	dm = !git diff $(git merge-base HEAD $(git master))
-	# diff staged
-	ds = diff --staged
 
 	# https://stackoverflow.com/a/3338774
 	ahead = log --branches --not --remotes --simplify-by-decoration --graph --oneline
