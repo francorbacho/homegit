@@ -95,3 +95,5 @@ match TrailingWhitespace /\s\+$/
 autocmd VimEnter * if exists(":GitGutter") | exe "autocmd ModeChanged,BufReadPost,BufWritePost * :GitGutter" | endif
 
 nnoremap <C-P> :GitGutterPreviewHunk<CR>
+nnoremap <C-U> :GitGutterUndoHunk<CR>
+nnoremap <C-K> :Vex<CR>
