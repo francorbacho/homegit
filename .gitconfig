@@ -35,8 +35,11 @@
 	rc = rebase --continue
 	ds = diff --staged
 	rs = restore --staged
+
 	# https://stackoverflow.com/a/20609719
-	big-objects = !git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -10
+	big-objects = !git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | less
+	# https://stackoverflow.com/a/48590251
+	find-object = log --find-object
 
 
 	lc = log --pretty=fuller --relative-date --show-signature
