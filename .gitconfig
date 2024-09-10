@@ -1,3 +1,6 @@
+[include]
+	path = ~/.config/git/local.conf
+
 [init]
 	defaultBranch = master
 
@@ -10,10 +13,6 @@
 
 [fetch]
 	prune = true
-
-[user]
-	email = francorbacho@proton.me
-	name = francorbacho
 
 [color "branch"]
 	current = yellow reverse
@@ -67,9 +66,3 @@
 [commit]
 	gpgsign = false
 	verbose = true
-
-[sendemail]
-	smtpserver = localhost
-	smtpuser = francorbacho@proton.me
-	smtpencryption = none
-	smtpserverport = 1025
