@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+#
+# Copy to clipboard
+
+exists() {
+    command -v "$@" > /dev/null
+}
+
+exists "wl-copy" && wl-copy "$@" && exit          # WAYLAND
+exists "clip.exe" && cat | clip.exe "$@" && exit  # WSL
