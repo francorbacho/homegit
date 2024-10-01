@@ -6,5 +6,10 @@ exists() {
     command -v "$@" > /dev/null
 }
 
-exists "wl-copy" && wl-copy "$@" && exit          # WAYLAND
-exists "clip.exe" && cat | clip.exe "$@" && exit  # WSL
+# https://superuser.com/a/1840676
+wsl-copy() {
+    powershell.exe -c "chcp 65001 >\$null; clip.exe"
+}
+
+exists "wl-copy"        && wl-copy "$@"   && exit  # WAYLAND
+exists "powershell.exe" && cat | wsl-copy && exit  # WSL
