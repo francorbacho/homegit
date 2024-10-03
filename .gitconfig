@@ -43,6 +43,8 @@
 
 	# rebase merge base
 	rmb = !git rebase --rebase-merges -i $(git merge-base HEAD $(git master))
+	# diff merge base
+	dmb = !git diff $(git merge-base HEAD $(git master))
 	# default branch
 	master = !basename $(git rev-parse --abbrev-ref origin/HEAD)
 	# diff master
