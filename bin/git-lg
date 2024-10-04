@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+colswrap=$(($(tput cols)-5))
+fmt="%w($colswrap)"
+fmt="$fmt%C(bold blue)%h%C(reset)"      # commit hash
+fmt="$fmt %C(bold cyan)%ah%C(reset)"    # date
+fmt="$fmt %C(dim white)- %an%C(reset):" # author
+fmt="$fmt %C(white)%s%C(reset)"         # summary
+
+exec git log --graph --abbrev-commit --decorate --format=format:"$fmt"
