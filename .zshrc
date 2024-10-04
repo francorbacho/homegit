@@ -50,7 +50,11 @@ setopt MARK_DIRS              # Adds a trailing / to directories resulting from 
 setopt NO_CLOBBER             # Disables shell redirection to files that already exist. Use >! to force.
 setopt GLOB_COMPLETE          # Globs (e.g. *.txt) that have multiple matches use menus.
 
-eval "$(starship init zsh)"
+if command -v starship; then
+    eval "$(starship init zsh)"
+else
+    PS1='%F{magenta}%B[%T]%b%f %F{green}%B%n@%m%b%f %F{cyan}%B%2~%#%b%f '
+fi
 
 # Don't pollute $HOME.
 # https://stackoverflow.com/a/71271754
