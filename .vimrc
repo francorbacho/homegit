@@ -3,6 +3,7 @@ set softtabstop=4
 set shiftwidth=4
 set number
 set nowrap
+set noswapfile
 
 set smarttab
 set expandtab
