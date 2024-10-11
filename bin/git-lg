@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 colswrap=$(($(tput cols)-5))
 fmt="%w($colswrap)"
