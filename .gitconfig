@@ -45,10 +45,10 @@
 	rmb = !git rebase --rebase-merges -i $(git merge-base HEAD $(git master))
 	# diff merge base
 	dmb = !git diff $(git merge-base HEAD $(git master))
+	# diff master
+	dm = !git diff $(git master)..HEAD
 	# default branch
 	master = !basename $(git rev-parse --abbrev-ref origin/HEAD)
-	# diff master
-	dm = !git diff $(git merge-base HEAD $(git master))
 
 	# https://stackoverflow.com/a/3338774
 	ahead = log --branches --not --remotes --simplify-by-decoration --graph --oneline
