@@ -47,6 +47,8 @@
 	dmb = !git diff $(git merge-base HEAD $(git master))
 	# diff master
 	dm = !git diff $(git master)..HEAD
+	# diff upstream
+	du = !git diff @{u}
 	# default branch
 	master = !basename $(git rev-parse --abbrev-ref origin/HEAD)
 
