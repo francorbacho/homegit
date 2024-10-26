@@ -45,7 +45,6 @@ setopt HIST_REDUCE_BLANKS     # Remove superfluous blanks before recording entry
 setopt HIST_BEEP              # Beep when accessing nonexistent history.
 
 setopt CORRECT                # Corrects unmatched external programs.
-setopt MENU_COMPLETE          # Correct and autocomplete in the first tab press.
 setopt MARK_DIRS              # Adds a trailing / to directories resulting from filename generation.
 setopt NO_CLOBBER             # Disables shell redirection to files that already exist. Use >! to force.
 setopt GLOB_COMPLETE          # Globs (e.g. *.txt) that have multiple matches use menus.
