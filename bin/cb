@@ -11,5 +11,16 @@ wsl-copy() {
     powershell.exe -c "chcp 65001 >\$null; clip.exe"
 }
 
+# load-buffer [-w] [-b buffer-name] [-t target-client] path
+#              (alias: loadb)
+#         Load the contents of the specified paste buffer from
+#         path.  If -w is given, the buffer is also sent to the
+#         clipboard for target-client using the xterm(1) escape
+#         sequence, if possible.
+tmux-copy() {
+    tmux load-buffer -w -
+}
+
+[ ! -z "$TMUX" ]        && tmux-copy      && exit  # TMUX
 exists "wl-copy"        && wl-copy "$@"   && exit  # WAYLAND
 exists "powershell.exe" && cat | wsl-copy && exit  # WSL
