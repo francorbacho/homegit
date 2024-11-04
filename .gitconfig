@@ -33,6 +33,8 @@
 	big-objects = !git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | less
 	# https://stackoverflow.com/a/48590251
 	find-object = log --find-object
+	# https://stackoverflow.com/a/1318854
+	ls-blobs = diff-tree -r -c -M -C --no-commit-id
 
 
 	lc = log --pretty=fuller --relative-date --show-signature
