@@ -4,6 +4,12 @@
 [init]
 	defaultBranch = master
 
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+
 [core]
 	hooksPath = ~/.config/git/hooks
 
