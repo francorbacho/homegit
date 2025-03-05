@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -xe
+
+cd
+restic -r ~/.restic backup --tag root --skip-if-unchanged root

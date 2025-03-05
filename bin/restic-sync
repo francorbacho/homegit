@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -xe
+
+cd
+restic -r rclone:htbox:restic copy --from-repo ~/.restic
