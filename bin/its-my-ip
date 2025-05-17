@@ -6,4 +6,7 @@ else
     arg="$1"
 fi
 
-psql -h pi.fran.cam -d generic -c "update ip_info set is_mine = true where client_ip = '$arg';" fran
+source ~/.secrets
+export PGPASSWORD
+
+psql -h pi.fran.cam --username fran -d generic -c "update ip_info set is_mine = true where client_ip = '$arg';"
