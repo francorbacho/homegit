@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+psql -h pi.fran.cam -d generic -c "update ip_info set is_mine = true where client_ip = '$(curl ifconfig.me)';" fran
