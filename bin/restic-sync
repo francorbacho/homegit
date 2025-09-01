@@ -3,4 +3,5 @@
 set -xe
 
 cd
+restic -r rclone:sandisk:/data/restic copy --from-repo ~/.restic
 restic -r rclone:htbox:restic copy --from-repo ~/.restic
