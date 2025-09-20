@@ -2,6 +2,8 @@
 alias hg='git --git-dir="$HOME/.homegit" --work-tree="$HOME"'
 alias rs='source ~/.zshrc'
 
+alias gap="git add -p"
+
 C=--color=always
 
 alias open=xdg-open
