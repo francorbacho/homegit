@@ -46,7 +46,6 @@ setopt HIST_BEEP              # Beep when accessing nonexistent history.
 
 setopt NONOMATCH              # Doesn't complain about 'no matches: foo*`
 setopt MARK_DIRS              # Adds a trailing / to directories resulting from filename generation.
-setopt NO_CLOBBER             # Disables shell redirection to files that already exist. Use >! to force.
 setopt GLOB_COMPLETE          # Globs (e.g. *.txt) that have multiple matches use menus.
 
 if command -v starship; then
