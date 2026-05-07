@@ -34,6 +34,7 @@
 	rc = rebase --continue
 	ds = diff --staged
 	rs = restore --staged
+	rh = reset --hard
 
 	# https://stackoverflow.com/a/20609719
 	big-objects = !git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | less
