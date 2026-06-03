@@ -43,6 +43,9 @@
 	# https://stackoverflow.com/a/1318854
 	ls-blobs = diff-tree -r -c -M -C --no-commit-id
 
+	# pull recursive
+	# https://stackoverflow.com/a/8084186
+	pullr = pull --recurse-submodules --jobs=10
 
 	lc = log --pretty=fuller --relative-date --show-signature
 	plog = log --pretty=oneline --abbrev-commit --check
