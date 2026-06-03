@@ -1,0 +1,3 @@
+#!/bin/bash
+
+vim $(git ls-files | fzf)
