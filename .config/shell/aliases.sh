@@ -6,8 +6,11 @@ alias gap="git add -p"
 
 C=--color=always
 
-alias open=xdg-open
-alias ls='ls --color=auto --group-directories-first'
+# macOS has built-in 'open', Linux uses xdg-open
+if ! command -v open >/dev/null 2>&1; then
+    alias open=xdg-open
+fi
+alias ls='ls --color=auto'
 alias rm=" rm"
 alias ip='ip --color=auto'
 alias grep='grep --color=auto'
