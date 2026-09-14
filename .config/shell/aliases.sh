@@ -11,7 +11,10 @@ if ! command -v open >/dev/null 2>&1; then
     alias open=xdg-open
 fi
 alias ls='ls --color=auto'
-alias rm=" rm"
+# NOTE: was `alias rm=" rm"` with a leading space. Combined with
+# HIST_IGNORE_SPACE that silently excluded every `rm` from history,
+# which looks like "history is not working". Don't hide commands here.
+alias rm='rm'
 alias ip='ip --color=auto'
 alias grep='grep --color=auto'
 alias poem="grep -E '^[[:alnum:]]+$' /usr/share/dict/american-english | shuf -n2 | tr '[:upper:]' '[:lower:]' | xargs printf '%s.%s\n'"

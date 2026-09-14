@@ -26,22 +26,26 @@ export LESS_TERMCAP_us=$(printf "\e[1;32m")
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
 command -v dircolors > /dev/null && test -z "$LS_COLORS" && eval $(dircolors ~/etc/LS_COLORS)
 
+# Infinite history: 2^31-1 is the max int zsh accepts, effectively unlimited.
 # From https://unix.stackexchange.com/a/273863
 HISTFILE="$HOME/.zsh_history"
-HISTSIZE=10000000
-SAVEHIST=10000000
+HISTSIZE=2147483647
+SAVEHIST=2147483647
 
 REPORTTIME=2
 
 # Some of these options are default anyway.
 setopt BANG_HIST              # Treat the '!' character specially during expansion.
-setopt INC_APPEND_HISTORY     # Write to the history file immediately, not when the shell exits.
+setopt EXTENDED_HISTORY       # Save timestamp + duration, required for durable shared history.
+setopt SHARE_HISTORY          # Share history between all sessions, import new lines immediately.
+setopt INC_APPEND_HISTORY_TIME # Write to the history file immediately with timestamp.
 setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history.
 setopt HIST_IGNORE_DUPS       # Don't record an entry that was just recorded again.
 setopt HIST_FIND_NO_DUPS      # Do not display a line previously found.
 setopt HIST_IGNORE_SPACE      # Don't record an entry starting with a space.
 setopt HIST_SAVE_NO_DUPS      # Don't write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS     # Remove superfluous blanks before recording entry.
+setopt HIST_VERIFY            # Show expanded history before running, so `!!` etc. is safe.
 setopt HIST_BEEP              # Beep when accessing nonexistent history.
 
 setopt NONOMATCH              # Doesn't complain about 'no matches: foo*`
