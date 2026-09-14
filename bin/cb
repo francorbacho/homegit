@@ -21,6 +21,7 @@ tmux-copy() {
     tmux load-buffer -w -
 }
 
-[ ! -z "$TMUX" ]        && tmux-copy      && exit  # TMUX
-exists "wl-copy"        && wl-copy "$@"   && exit  # WAYLAND
-exists "powershell.exe" && cat | wsl-copy && exit  # WSL
+[ ! -z "$TMUX" ]        && tmux-copy           && exit  # TMUX
+exists "wl-copy"        && wl-copy "$@"        && exit  # WAYLAND
+exists "powershell.exe" && cat | wsl-copy      && exit  # WSL
+exists "pbcopy"         && tr -d '\n' | pbcopy && exit  # MacOS

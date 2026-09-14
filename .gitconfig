@@ -84,3 +84,5 @@
 [commit]
 	gpgsign = false
 	verbose = true
+[safe]
+	directory = /opt/esp-idf

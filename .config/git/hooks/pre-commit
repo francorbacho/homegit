@@ -1,9 +1,8 @@
-#!/bin/bash -eu
+#!/bin/sh
+set -eu
 
-files=$(git diff --staged --name-only)
-
-if [[ $(cat "$files" | grep -c ' $') -ne 0 ]]; then
-    echo "Trailing whitespace found on files: "
-    grep -nH --color=always ' $' $files
+if ! output=$(git diff --cached --check -- 2>&1); then
+    printf '%s\n' "$output" >&2
+    printf '\nCommit aborted: remove the reported whitespace errors and retry.\n' >&2
     exit 1
 fi
