@@ -1,4 +1,4 @@
-export PATH="$HOME/bin/:$HOME/.cargo/bin/:$PATH"
+export PATH="$HOME/bin/:$HOME/.cargo/bin/:$HOME/.bun/bin:$PATH"
 export EDITOR="`which vim`"
 export LANG=en_us.UTF-8
 export LC_ALL=en_US.UTF-8
